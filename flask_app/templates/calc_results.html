@@ -1,13 +1,35 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<h1>Loan Calculation Results</h1>
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1>Student Loan Calculator</h1>
+      <p class="lead text-muted"></p>
 
-<p>
-    Monthly Payment: ${{ monthly_payment }}
-</p>
+    </div>
+  </section>
 
-<br>
-<a href="/calc"><-- New Loan Calculation</a>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
+      <div class="row">
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Loan Calculation Results
+                </div>
+                <div class="card-body">
+                    Monthly Payment: {{ monthly_payment }}
+                    <br>
+                    <br>
+                    <a href="" class="btn btn-primary"><- Back</a>
+                </div>
+            </div>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
 {% endblock %}

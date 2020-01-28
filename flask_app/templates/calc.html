@@ -1,28 +1,52 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<h1>Student Loan Calculator</h1>
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1>Student Loan Calculator</h1>
+      <p class="lead text-muted"></p>
 
-<form action="/calc" method="POST">
-    <label for="pa">Present Value:</label>
-    <input type="text" id="pv" name="present_value">
+    </div>
+  </section>
 
-    <br>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-    <label for="i">Interest Rate:</label>
-    <input type="text" id="i" name="interest">
+      <div class="row">
 
-    <br>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Student Loan Calculator
+                </div>
+                <div class="card-body">
+                    <form action="/calc" method="POST">
+                        <label for="pa">Present Value:</label>
+                        <input type="text" id="pv" name="present_value">
+                    
+                        <br>
+                    
+                        <label for="i">Interest Rate:</label>
+                        <input type="text" id="i" name="interest">
+                    
+                        <br>
+                    
+                        <label for="years">Years to Pay off in:</label>
+                        <input type="text" id="years" name="years">
+                    
+                        <br>
+                        <br>
+                    
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    
+                    
+                    </form>
+                </div>
+            </div>
 
-    <label for="years">Years to Pay off in:</label>
-    <input type="text" id="years" name="years">
-
-    <br>
-    <br>
-
-    <button type="submit">Calculate</button>
-
-
-</form>
-
+        </div>
+       
+      </div>
+    </div>
+  </div>
 {% endblock %}
