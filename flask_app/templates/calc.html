@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Student Loan Calculator</h1>
+
+<form action="/calc" method="POST">
+    <label for="pa">Present Value:</label>
+    <input type="text" id="pv" name="present_value">
+
+    <br>
+
+    <label for="i">Interest Rate:</label>
+    <input type="text" id="i" name="interest">
+
+    <br>
+
+    <label for="years">Years to Pay off in:</label>
+    <input type="text" id="years" name="years">
+
+    <br>
+    <br>
+
+    <button type="submit">Calculate</button>
+
+
+</form>
+
+{% endblock %}
